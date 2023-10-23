@@ -8,7 +8,7 @@ class gui{
         //Creating the Frame
         JFrame frame = new JFrame("Blueprint frame");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(800, 600);
+        frame.setSize(900, 600);
 
         //Creating the MenuBar and adding components
         JMenuBar mb = new JMenuBar();
@@ -28,14 +28,11 @@ class gui{
         toolbar.setRollover(true);  
         toolbar.add(new JComboBox(new String[] { "Tool 1", "Tool 2", "Tool 3", "Tool 4" }));  
 
-        // Text Area at the Center
-        JTextArea ta = new JTextArea();
         JLabel grid = new JLabel(new ImageIcon("grid.png"));
 
         //Adding Components to the frame.
         frame.getContentPane().add(BorderLayout.SOUTH, toolbar);
         frame.getContentPane().add(BorderLayout.NORTH, mb);
-        frame.getContentPane().add(BorderLayout.CENTER, ta);
         frame.getContentPane().add(BorderLayout.CENTER, grid);
 
         frame.setVisible(true);
